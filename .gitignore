@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Excalidraw 임시 백업 (실제 다이어그램은 .excalidraw.png 형식 권장)
+*.excalidraw.bak
