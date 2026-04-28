@@ -27,6 +27,24 @@
 - 이미지는 `images/` 아래 평평하게, 글이랑 같은 prefix 사용 (예: `java-jvm-heap.excalidraw.png`)
 - 새 글 추가 시 `README.md`의 인덱스 섹션 갱신
 
+## 메타데이터 (frontmatter)
+
+모든 글 최상단에 YAML frontmatter.
+
+```yaml
+---
+date: 2026-04-28
+tags: [java, jvm]
+status: draft   # draft | done ("설명 가능" 통과 시 done)
+sources:
+  - "책/아티클/영상 출처"
+---
+```
+
+- `status: done`이 졸업 게이트. 통과한 글만 README 인덱스에 노출하는 흐름도 가능
+- `tags`는 교차 분류용. 한 글이 여러 영역에 걸칠 때 사용 (예: `[java, concurrency]`)
+- `sources`는 옵션. 본문에서 다시 풀어쓴 입력 출처 기록
+
 ## 다이어그램
 
 ### Mermaid (텍스트 기반)
