@@ -24,4 +24,35 @@
 
 - 모든 글은 `notes/` 아래 평평하게
 - 파일명: `{카테고리}-{주제}.md` (예: `java-jvm-memory-model.md`)
+- 이미지는 `images/` 아래 평평하게, 글이랑 같은 prefix 사용 (예: `java-jvm-heap.excalidraw.png`)
 - 새 글 추가 시 `README.md`의 인덱스 섹션 갱신
+
+## 다이어그램
+
+### Mermaid (텍스트 기반)
+정형 다이어그램(시퀀스/플로우/ER/클래스)은 마크다운 본문에 직접 작성.
+
+````markdown
+```mermaid
+sequenceDiagram
+  Client->>Server: 요청
+  Server-->>Client: 응답
+```
+````
+
+### Excalidraw (자유 배치)
+박스/화살표 자유롭게 배치할 때 사용. **편집 가능한 PNG**로 저장하는 게 핵심.
+
+워크플로:
+1. https://excalidraw.com 접속 (또는 VSCode `Excalidraw` 확장 설치)
+2. 다이어그램 그리기
+3. 메뉴 → Export image → PNG → **"Embed scene" 체크** → 다운로드
+4. `images/{글-prefix}-{설명}.excalidraw.png` 으로 저장
+5. 마크다운에서 `![설명](../images/java-jvm-heap.excalidraw.png)` 로 참조
+
+편집할 때: 같은 `.excalidraw.png` 파일을 excalidraw.com에 드래그하면 원본 장면 그대로 다시 편집 가능. 수정 후 같은 방식으로 재저장.
+
+### 출처 원칙
+- 책/아티클 그림 그대로 캡처 금지. 이해한 걸 본인이 다시 그린다
+- 정 인용해야 하면 출처 명시 + 본문에서 "내가 이해한 건…"으로 다시 풀어쓰기
+- 디버깅 스크린샷, 측정 결과(그라파나 등)는 OK
