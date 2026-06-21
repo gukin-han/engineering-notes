@@ -1,21 +1,20 @@
 # engineering-notes
 
-백엔드 엔지니어링 이론을 내 언어로 풀어쓴 글 모음.
+> **내 지식 바운더리 지도.** 백엔드를 확장하면서, 동시에 *내가 어디까지 알고 어디부터 모르는지* 경계를 눈에 보이게 둔다.
+> 지식은 AI에 다 있지만 **뭘 물어볼지를 망각**하는 게 진짜 병목 — 이 로드맵이 그 망각을 막는 길라잡이다.
+>
+> 작성 규칙 → [CLAUDE.md](CLAUDE.md)
 
-## 원칙
+## 로드맵
 
-- 한 주제를 끝까지 **설명할 수 있을 때**만 글로 남긴다
-- 책/아티클 요약이 아니라 머릿속에서 재구성한 것만 올린다
-- 짧고 거칠어도 됨. 단 "왜 그런가"까지 닿아야 한다
+범례: ✅ 작성됨 · ⬜ 예정 (= 아직 안 잡은 지식의 가장자리)
 
-> 위 원칙과 노트 컨벤션(파인만 기법, Q 마커, 졸업 게이트, 메타데이터 등)은 `notes/`에만 적용된다. `references/`는 제외 — 그냥 적어두는 곳이다.
+### Spring Core
 
-## 구조
-
-- `notes/` — 본인 언어로 재구성한 글. 평평하게, 파일명: `{카테고리}-{주제}.md` (예: `java-jvm-memory-model.md`)
-- `references/` — 외부 자료 raw 저장소 (강의 스크립트 등). 컨벤션 적용 제외, 자유 구조
-- `images/` — 다이어그램/스크린샷. 평평하게, 글과 같은 prefix
-
-## 인덱스
-
-(첫 글 추가 시 채움)
+- [IoC 컨테이너와 DI](spring-core/01-ioc-container.md) ✅
+- [빈 생명주기](spring-core/02-bean-lifecycle.md) ✅
+- 빈 스코프 (singleton · prototype · web) ⬜
+- `@Configuration` vs 컴포넌트 스캔 ⬜
+- AOP (프록시 · advice · pointcut) ⬜
+- 트랜잭션 (`@Transactional` 동작 · 전파) ⬜
+- 이벤트 (ApplicationEvent · Listener) ⬜
